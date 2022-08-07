@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "dd74b1da-e965-4abb-8c15-c50a31ee0be1",
+		"name": "Image-go-back",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17344142"
+	},
+	"item": [
+		{
+			"name": "Get One",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/images/:imgId?quality=50",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"images",
+						":imgId"
+					],
+					"query": [
+						{
+							"key": "quality",
+							"value": "50",
+							"description": "100/75/50/25"
+						}
+					],
+					"variable": [
+						{
+							"key": "imgId",
+							"value": "",
+							"description": "obj_id int from request Save"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "/Users/maksympopov/Downloads/image_2022-06-20_22-26-20.png"
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/images",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"images"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "localhost:8080/api/v1"
+		}
+	]
+}
